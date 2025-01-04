@@ -1,4 +1,4 @@
-Here aare the steps to folow to run the code...
+Here are the steps to folow to run the code...
 
 1-> upload Dataset into mongodb, database name-> project, collection-> future.
 
@@ -10,6 +10,7 @@ Here aare the steps to folow to run the code...
 
 5-> at last app.py which is backend file.
 
+
 How to run...?
 
 1-> Store all the file in one folder and open in any code editor.
@@ -17,5 +18,6 @@ How to run...?
 2-> run server in your computer (eg if u use mongodb serve then type mongod in cmd).
 
 3-> if you use cmd the use cd "c:/path of folder" python filename.py this command use for data cleaning, model and app file but to run the project only run app.py file.
+
 
 Thank you...
