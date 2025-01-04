@@ -1,0 +1,539 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Information</title>
+  <link rel="stylesheet" href="static/blackbox.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Student Information Form</h1>
+    <form action="/submit" method="POST">
+
+      
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      
+      <label>Gender</label>
+      <div class="radio-group">
+        <label for="gender-male">
+          <input type="radio" id="gender-male" name="gender" value="male" required> Male
+        </label>
+        <label for="gender-female">
+          <input type="radio" id="gender-female" name="gender" value="female"> Female
+        </label>
+      </div>
+
+      
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" min="15" max="19" placeholder="Enter your age" required>
+
+      
+      <label for="study-time">Study Time (min)</label>
+      <select id="study-time" name="study-time" required>
+        <option value="">Select Study Time</option>
+        <option value="10">10 mins</option>
+        <option value="20">20 mins</option>
+        <option value="30">30 mins</option>
+      </select>
+
+      
+      <label for="fail-number">Class</label>
+      <select id="fail-number" name="fail-number" required>
+        <option value="">Select Class</option>
+        <option value="7">7th</option>
+        <option value="8">8th</option>
+        <option value="9">9th</option>
+      </select>
+
+      
+      <label>School Support</label>
+      <div class="radio-group">
+        <label for="schoolsup-yes">
+          <input type="radio" id="schoolsup-yes" name="schoolsup" value="yes" required> Yes
+        </label>
+        <label for="schoolsup-no">
+          <input type="radio" id="schoolsup-no" name="schoolsup" value="no"> No
+        </label>
+      </div>
+
+      
+      <label for="activities">Activities</label>
+      <textarea id="activities" name="activities" placeholder="Describe your activities"></textarea>
+
+      
+      <label>Higher Education</label>
+      <div class="radio-group">
+        <label for="higher-yes">
+          <input type="radio" id="higher-yes" name="higher" value="yes" required> Yes
+        </label>
+        <label for="higher-no">
+          <input type="radio" id="higher-no" name="higher" value="no"> No
+        </label>
+      </div>
+
+      
+      <label>Internet Access</label>
+      <div class="radio-group">
+        <label for="internet-yes">
+          <input type="radio" id="internet-yes" name="internet" value="yes" required> Yes
+        </label>
+        <label for="internet-no">
+          <input type="radio" id="internet-no" name="internet" value="no"> No
+        </label>
+      </div>
+
+      
+      <label for="free-time">Free Time </label>
+      <input type="range" id="free-time" name="free-time" min="60" max="300" step="10" value="60">
+      <output id="free-time-output"></output>
+
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
+-->
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <link rel="stylesheet" href="static/blackbox.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Information Form</h1>
+        <form action="/submit" method="POST">
+            
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+            
+            <label>Gender</label>
+            <div class="radio-group">
+                <label for="sex-male">
+                    <input type="radio" id="sex-male" name="sex" value="male" required> Male
+                </label>
+                <label for="sex-female">
+                    <input type="radio" id="sex-female" name="sex" value="female"> Female
+                </label>
+            </div>
+            
+            
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="15" max="19" placeholder="Enter your age" required>
+            
+            
+            <label for="study-time">Study Time (min)</label>
+            <select id="study-time" name="study-time" required>
+                <option value="">Select Study Time</option>
+                <option value="10">10 mins</option>
+                <option value="20">20 mins</option>
+                <option value="30">30 mins</option>
+            </select>
+            
+            
+            <label for="fail-number">Class</label>
+            <select id="fail-number" name="fail-number" required>
+                <option value="">Select Class</option>
+                <option value="7">7th</option>
+                <option value="8">8th</option>
+                <option value="9">9th</option>
+            </select>
+            
+            
+            <label>School Support</label>
+            <div class="radio-group">
+                <label for="schoolsup-yes">
+                    <input type="radio" id="schoolsup-yes" name="schoolsup" value="yes" required> Yes
+                </label>
+                <label for="schoolsup-no">
+                    <input type="radio" id="schoolsup-no" name="schoolsup" value="no"> No
+                </label>
+            </div>
+            
+            
+            <label for="activities">Activities</label>
+            <textarea id="activities" name="activities" placeholder="Describe your activities"></textarea>
+            
+            
+            <label>Higher Education</label>
+            <div class="radio-group">
+                <label for="higher-yes">
+                    <input type="radio" id="higher-yes" name="higher" value="yes" required> Yes
+                </label>
+                <label for="higher-no">
+                    <input type="radio" id="higher-no" name="higher" value="no"> No
+                </label>
+            </div>
+            
+            
+            <label>Internet Access</label>
+            <div class="radio-group">
+                <label for="internet-yes">
+                    <input type="radio" id="internet-yes" name="internet" value="yes" required> Yes
+                </label>
+                <label for="internet-no">
+                    <input type="radio" id="internet-no" name="internet" value="no"> No
+                </label>
+            </div>
+            
+            
+            <label for="free-time">Free Time </label>
+            <input type="range" id="free-time" name="free-time" min="60" max="300" step="10" value="60">
+            <output id="free-time-output"></output>
+            
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+-->
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <link rel="stylesheet" href="static/blackbox.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Information Form</h1>
+        <form action="/submit" method="POST">
+            -- Name --
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+
+            <!-- Gender --
+            <label>Gender</label>
+            <div class="radio-group">
+                <label for="sex-male">
+                <input type="radio" id="sex-male" name="sex" value="M" required> Male
+                </label>
+                <label for="sex-female">
+                <input type="radio" id="sex-female" name="sex" value="F"> Female
+                </label>
+            </div>
+
+            <!-- Age --
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="15" max="19" placeholder="Enter your age" required>
+
+            <!-- Higher Education--
+            <label for="higher">Higher Education</label>
+            <select id="higher" name="higher" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <!-- Study Time --
+            <label for="studytime">Study Time (hours per week)</label>
+            <select id="studytime" name="studytime" required>
+                <option value="1">Less than 2 hours</option>
+                <option value="2">2 to 5 hours</option>
+                <option value="3">5 to 10 hours</option>
+                <option value="4">More than 10 hours</option>
+            </select>
+
+            <!-- Parent Jobs --
+            <label for="Mjob">Mother's Job</label>
+            <select id="Mjob" name="Mjob" required>
+                <option value="teacher">Teacher</option>
+                <option value="health">Healthcare</option>
+                <option value="services">Services</option>
+                <option value="at_home">At Home</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="Fjob">Father's Job</label>
+            <select id="Fjob" name="Fjob" required>
+                <option value="teacher">Teacher</option>
+                <option value="health">Healthcare</option>
+                <option value="services">Services</option>
+                <option value="at_home">At Home</option>
+                <option value="other">Other</option>
+            </select>
+
+            <!-- Family Support (famsup) --
+            <label for="famsup">Family Support</label>
+            <select id="famsup" name="famsup" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <!-- Internet Access --
+            <label for="internet">Internet Access</label>
+            <select id="internet" name="internet" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <!-- fail --
+            <label for="fail-number">Class</label>
+            <select id="fail-number" name="fail-number" required>
+                <option value="7">7th</option>
+                <option value="8">8th</option>
+                <option value="9">9th</option>
+            </select>
+
+            <label for="activities">Activities</label>
+            <textarea id="activities" name="activities" placeholder="Describe your activities"></textarea>
+
+            <!-- free time --
+            <label for="freetime">Free Time</label>
+            <select id="freetime" name="freetime" required>
+                <option value="1">Very low</option>
+                <option value="2">Low</option>
+                <option value="3">Average</option>
+                <option value="4">High</option>
+                <option value="5">Very high</option>
+            </select>
+
+            <!-- Submit --
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+-->
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <link rel="stylesheet" href="static/blackbox.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Information Form</h1>
+        <form action="/submit" method="POST">
+            <!-- Name --
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <!-- Gender --
+            <label>sex</label>
+            <div class="radio-group">
+                <label for="sex-male">
+                <input type="radio" id="sex-male" name="sex" value="M" required> Male
+                </label>
+                <label for="sex-female">
+                <input type="radio" id="sex-female" name="sex" value="F"> Female
+                </label>
+            </div>
+
+            <!-- Age --
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="15" max="19" placeholder="Enter your age" required>
+
+            <!-- Higher Education--
+            <label for="higher">Higher Education</label>
+            <select id="higher" name="higher" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <!-- Study Time --
+            <label for="studytime">Study Time (hours per week)</label>
+            <select id="studytime" name="studytime" required>
+                <option value="1">Less than 2 hours</option>
+                <option value="2">2 to 5 hours</option>
+                <option value="3">5 to 10 hours</option>
+                <option value="4">More than 10 hours</option>
+            </select>
+
+            <!-- Parent Jobs --
+            <label for="Mjob">Mother's Job</label>
+            <select id="Mjob" name="Mjob" required>
+                <option value="teacher">Teacher</option>
+                <option value="health">Healthcare</option>
+                <option value="services">Services</option>
+                <option value="at_home">At Home</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="Fjob">Father's Job</label>
+            <select id="Fjob" name="Fjob" required>
+                <option value="teacher">Teacher</option>
+                <option value="health">Healthcare</option>
+                <option value="services">Services</option>
+                <option value="at_home">At Home</option>
+                <option value="other">Other</option>
+            </select>
+
+            <!-- Family Support (famsup) 
+            <label for="famsup">Family Support</label>
+            <select id="famsup" name="famsup" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select> -->
+
+            <!-- Internet Access --
+            <label for="internet">Internet Access</label>
+            <select id="internet" name="internet" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <!-- fail --
+            <label for="fail-number">Fail number</label>
+            <select id="fail-number" name="fail-number" required>
+                <option value="7">7th</option>
+                <option value="8">8th</option>
+                <option value="9">9th</option>
+            </select>
+
+            <label for="activities">Activities</label>
+            <textarea id="activities" name="activities" placeholder="Describe your activities"></textarea>
+
+            <!-- free time --
+            <label for="freetime">Free Time</label>
+            <select id="freetime" name="freetime" required>
+                <option value="1">Very low</option>
+                <option value="2">Low</option>
+                <option value="3">Average</option>
+                <option value="4">High</option>
+                <option value="5">Very high</option>
+            </select>
+
+            <!-- Submit --
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+
+latest file-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <link rel="stylesheet" href="static/blackbox.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Information Form</h1>
+        <form action="/submit" method="POST">
+            <!-- Name -->
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <!-- Gender -->
+            <label>Sex</label>
+            <div class="radio-group">
+                <label for="sex-male">
+                    <input type="radio" id="sex-male" name="sex" value="M" required> Male
+                </label>
+                <label for="sex-female">
+                    <input type="radio" id="sex-female" name="sex" value="F"> Female
+                </label>
+            </div>
+
+            <!-- Age -->
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="15" max="23" placeholder="Enter your age" required>
+
+            <!-- Mother's Job -->
+            <label for="Mjob">Mother's Job</label>
+            <select id="Mjob" name="Mjob" required>
+                <option value="teacher">Teacher</option>
+                <option value="health">Healthcare</option>
+                <option value="services">Services</option>
+                <option value="at_home">At Home</option>
+                <option value="other">Other</option>
+            </select>
+
+            <!-- Father's Job -->
+            <label for="Fjob">Father's Job</label>
+            <select id="Fjob" name="Fjob" required>
+                <option value="teacher">Teacher</option>
+                <option value="health">Healthcare</option>
+                <option value="services">Services</option>
+                <option value="at_home">At Home</option>
+                <option value="other">Other</option>
+            </select>
+
+            <!-- Study Time -->
+            <label for="studytime">Study Time (hours per day)</label>
+            <select id="studytime" name="studytime" required>
+                <option value="1">Less than 2 hours</option>
+                <option value="2">2 to 5 hours</option>
+                <option value="3">5 to 10 hours</option>
+                <option value="4">More than 10 hours</option>
+            </select>
+
+            <!-- Failures -->
+            <label for="failures">Number of Past Failures</label>
+            <input type="number" id="failures" name="failures" min="0" max="5" placeholder="Enter number of past failures" required>
+
+            <!-- Activities -->
+            <label for="activities">Extracurricular Activities</label>
+            <select id="activities" name="activities" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <!-- Higher Education -->
+            <label for="higher">Higher Education</label>
+            <select id="higher" name="higher" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <!-- Internet Access -->
+            <label for="internet">Internet Access</label>
+            <select id="internet" name="internet" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <!-- Free Time -->
+            <label for="freetime">Free Time (1-5 in hr)</label>
+            <input type="number" id="freetime" name="freetime" min="1" max="5" placeholder="Enter your free time" required>
+
+            <!-- Absences -->
+            <label for="absences">Number of Absences (in days)</label>
+            <input type="number" id="absences" name="absences" min="0" max="100" placeholder="Enter number of absences" required>
+
+            <!-- G1, G2, G3 Grades -->
+            <label for="G1">10th (percentage)</label>
+            <input type="number" id="G1" name="G1" min="0" max="20" placeholder="from 0 to 20" required>
+
+            <label for="G2">11th (percentage)</label>
+            <input type="number" id="G2" name="G2" min="0" max="20" placeholder="from 0 to 20" required>
+
+            <label for="G3">12th (percentage)</label>
+            <input type="number" id="G3" name="G3" min="0" max="20" placeholder="from 0 to 20" required>
+
+            <!-- Submit -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

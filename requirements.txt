@@ -1,0 +1,5 @@
+pymongo
+flask
+pandas
+scikit-learn
+joblib
